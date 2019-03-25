@@ -1,0 +1,47 @@
+Saxon and Xalan are XSLT processors.
+
+XSLT stylesheets are interpreted by XSLT processors which generate a result from source XML.
+
+Saxon is an XSLT 2.0 processor written in Java.
+
+The <xsl:value-of> element usually takes an attribute called select. When the XSLT processor encounters an 
+<xsl:value-of> instruction in the stylesheet, it inserts the value specified by the <xsl:value-of> element’s 
+select attribute.
+
+XML distinguishes between elements and attributes from different markup languages with namespaces.Most markup 
+languages have their own namespace, which is identified with a unique identifier—a namespace URI. Namespace URIs 
+are often (though not always) URLs.
+
+A namespace declaration that doesn’t specify a prefix indicates the default namespace.
+
+When an XML parser goes through a document, it looks at each element and attribute and tries to work out what 
+namespace the element or attribute belongs to. It treats the name of each element and attribute as a qualified 
+name or QName for short—a name that is qualified by the namespace to which the element or attribute belongs. If a 
+qualified name contains a colon (:),then the part before the colon indicates a namespace prefix. The part after 
+the colon is known as the local part or local name of the element.
+
+Qualified names that don’t have colons are treated a little differently. If an element’s name doesn’t contain a 
+colon, then the element belongs to the default namespace.
+
+The <xsl:for-each> element iterates over the items in the sequence specified by the XPath in its select attribute.
+
+Absolute paths start from the top of the document and work down from there. ( starts by /).
+
+Relative paths don’t start with a / . Relative paths are always evaluated relative to the context node. The context
+node is the element (or attribute, comment, or other kind of node) that we’re currently processing.
+
+Absolute paths start with a / and reference nodes starting from the top of the XML document. Relative paths are 
+evaluated starting from the context node, which is whatever node is currently being processed.
+
+Inside the <xsl:stylesheet> document element, XSLT stylesheets are made up of a number of templates, each of which 
+matches a particular part of the input XML document and processes it in whatever way we define. The templates are 
+rules that define how a particular part of the input XML document maps on to the result that we want. Thus a full 
+stylesheet has a structure that’s quite similar to the structure of CSS stylesheets—a set of rules that match 
+different elements and describe how they should be presented.
+
+
+
+
+
+
+
